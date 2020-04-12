@@ -4,5 +4,15 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.spring_ex.ums.member.model.dao">
-
+	
+	<select id="memberList" resultType="com.spring_ex.ums.member.model.dto">
+		SELECT
+			user_id AS userId,
+			user_name AS userName,
+			user_email AS userEmail,
+			user_regdate AS userRegDate
+		FROM members
+		ORDER BY userName
+	</select>
+	
 </mapper>
