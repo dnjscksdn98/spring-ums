@@ -10,13 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.spring_ex.ums.member.model.dto.MemberDto;
-import com.spring_ex.ums.member.service.MemberService;
+import com.spring_ex.ums.member.service.MemberServiceImpl;
 
 @Controller
 public class MemberController {
 	
 	@Autowired
-	MemberService memberService;
+	MemberServiceImpl memberService;
 	
 	@RequestMapping("member/list.do")
 	public String memberList(Model model) {
