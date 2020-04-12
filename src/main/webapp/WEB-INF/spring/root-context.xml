@@ -35,4 +35,10 @@
 		<constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
 	</bean>
 	
+	<!-- Member Service bean -->
+	<bean id="memberService" class="com.spring_ex.ums.member.service.MemberServiceImpl" />
+	
+	<!-- Member Dao bean -->
+	<bean id="memberDao" class="com.spring_ex.ums.member.model.dao.MemberDaoImpl" />
+	
 </beans>
