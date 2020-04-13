@@ -15,4 +15,6 @@ public interface MemberDao {
 	public void deleteMember(String userId);  // 회원 삭제
 	
 	public void updateMember(MemberDto dto);  // 회원 정보 수정
+	
+	public boolean checkPw(String userId, String userPw);
 }

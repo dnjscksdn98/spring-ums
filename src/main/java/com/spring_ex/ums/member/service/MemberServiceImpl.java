@@ -32,11 +32,16 @@ public class MemberServiceImpl implements MemberService {
 	
 	@Override
 	public void deleteMember(String userId) {
-		
+		memberDao.deleteMember(userId);
 	}
 	
 	@Override
 	public void updateMember(MemberDto dto) {
 		memberDao.updateMember(dto);
+	}
+	
+	@Override
+	public boolean checkPw(String userId, String userPw) {
+		return memberDao.checkPw(userId, userPw);
 	}
 }
