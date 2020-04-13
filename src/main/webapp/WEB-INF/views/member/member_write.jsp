@@ -8,6 +8,7 @@
 		<%@ include file="./member_header.jsp" %>
 	</head>
 	<body>
+		<%@ include file="./member_menu.jsp" %>
 		<h2>회원 등록</h2>
 		<form name="write_form" method="post" action="${path}/member/insert.do">
 			<table border="1" width="400px">

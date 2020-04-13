@@ -20,7 +20,7 @@
 	<!-- 회원 등록 -->
 	<insert id="insertMember">
 		INSERT INTO members(user_id, user_pw, user_name, user_email)
-		VALUES(#{userID}, #{userPw}, #{userName}, #{userEmail})
+		VALUES(#{userId}, #{userPw}, #{userName}, #{userEmail})
 	</insert>
 	
 </mapper>
