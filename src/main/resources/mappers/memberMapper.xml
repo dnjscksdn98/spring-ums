@@ -47,4 +47,17 @@
 			user_id = #{userId}
 	</update>
 	
+	<!-- 회원 정보 삭제 처리 -->
+	<delete id="deleteMember">
+		DELETE FROM members
+		WHERE user_id = #{userId}
+	</delete>
+	
+	<!-- 비밀번호 확인 -->
+	<select id="checkPw" resultType="int">
+		SELECT COUNT(*)
+		FROM members
+		WHERE user_id = #{userId} AND user_pw = #{userPw}
+	</select>
+	
 </mapper>
