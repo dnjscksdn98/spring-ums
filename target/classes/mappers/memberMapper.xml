@@ -23,4 +23,16 @@
 		VALUES(#{userId}, #{userPw}, #{userName}, #{userEmail})
 	</insert>
 	
+	<!-- 회원 정보 상세 조회 -->
+	<select id="viewMember" resultType="com.spring_ex.ums.member.model.dto.MemberDto">
+		SELECT
+			user_id AS userId,
+			user_name AS userName,
+			user_email AS userEmail,
+			user_regdate AS userRegDate,
+			user_updatedate AS userUpdateDate
+		FROM members
+		WHERE user_id = #{userId}
+	</select>
+	
 </mapper>
