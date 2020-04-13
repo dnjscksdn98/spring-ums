@@ -22,7 +22,7 @@ public class MemberServiceImpl implements MemberService {
 	
 	@Override
 	public void insertMember(MemberDto dto) {
-		
+		memberDao.insertMember(dto);
 	}
 	
 	@Override
