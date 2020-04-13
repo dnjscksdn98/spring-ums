@@ -22,7 +22,7 @@ public class MemberDaoImpl implements MemberDao {
 	
 	@Override
 	public void insertMember(MemberDto dto) {
-		
+		sqlSession.insert("member.inserMember", dto);
 	}
 	
 	@Override
