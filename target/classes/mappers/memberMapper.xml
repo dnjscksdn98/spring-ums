@@ -3,8 +3,10 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
+<!-- 다른 mapper와 중복되지 않도록 네임스페이스 기재 -->
 <mapper namespace="member">
 	
+	<!-- 회원 목록 -->
 	<select id="memberList" resultType="com.spring_ex.ums.member.model.dto.MemberDto">
 		SELECT
 			user_id AS userId,
@@ -15,5 +17,10 @@
 		ORDER BY userName
 	</select>
 	
+	<!-- 회원 등록 -->
+	<insert id="insertMember">
+		INSERT INTO members(user_id, user_pw, user_name, user_email)
+		VALUES(#{userID}, #{userPw}, #{userName}, #{userEmail})
+	</insert>
 	
 </mapper>
