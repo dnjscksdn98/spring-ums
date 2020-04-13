@@ -35,4 +35,10 @@ public class MemberController {
 		
 		return "redirect:/member/list.do";
 	}
+	
+	@RequestMapping("member/view.do")
+	public String memberView(String userId, Model model) {
+		model.addAttribute("dto", memberService.viewMember(userId));
+		return "member/member_view";
+	}
 }
