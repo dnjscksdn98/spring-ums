@@ -10,7 +10,7 @@ public interface MemberService {
 	
 	public void insertMember(MemberDto dto);
 	
-	public MemberDto viewMember();
+	public MemberDto viewMember(String userId);
 	
 	public void deleteMember(String userId);
 	

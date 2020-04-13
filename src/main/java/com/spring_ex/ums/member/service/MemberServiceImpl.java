@@ -26,8 +26,8 @@ public class MemberServiceImpl implements MemberService {
 	}
 	
 	@Override
-	public MemberDto viewMember() {
-		return null;
+	public MemberDto viewMember(String userId) {
+		return memberDao.viewMember(userId);
 	}
 	
 	@Override
