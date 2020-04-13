@@ -22,7 +22,7 @@
 			<c:forEach var="row" items="${list}">
 			<tr>
 				<th>${row.getUserId()}</th>
-				<th>${row.getUserName()}</th>
+				<th><a href="${path}/member/view.do?userId=${row.getUserId()}">${row.getUserName()}</a></th>
 				<th>${row.getUserEmail()}</th>
 				<th>${row.getUserRegDate()}</th>
 			</tr>
