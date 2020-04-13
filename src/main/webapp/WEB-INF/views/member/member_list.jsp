@@ -11,6 +11,7 @@
 		<%@ include file="./member_menu.jsp" %>
 		
 		<h2>회원 목록</h2>
+		<input type="button" value="회원 등록" onclick="location.href='${path}/member/write.do'" />
 		<table border="1" width="700px">
 			<tr>
 				<th>아이디</th>
