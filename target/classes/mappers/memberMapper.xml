@@ -3,9 +3,9 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.spring_ex.ums.member.model.dao">
+<mapper namespace="member">
 	
-	<select id="memberList" resultType="com.spring_ex.ums.member.model.dto">
+	<select id="memberList" resultType="com.spring_ex.ums.member.model.dto.MemberDto">
 		SELECT
 			user_id AS userId,
 			user_name AS userName,
@@ -14,5 +14,6 @@
 		FROM members
 		ORDER BY userName
 	</select>
+	
 	
 </mapper>

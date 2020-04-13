@@ -2,8 +2,6 @@ package com.spring_ex.ums.member.controller;
 
 import java.util.List;
 
-import javax.inject.Inject;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +15,7 @@ public class MemberController {
 	
 	@Autowired
 	MemberServiceImpl memberService;
-	
+
 	@RequestMapping("member/list.do")
 	public String memberList(Model model) {
 		List<MemberDto> list = memberService.memberList();
