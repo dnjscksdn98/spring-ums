@@ -41,4 +41,10 @@ public class MemberController {
 		model.addAttribute("dto", memberService.viewMember(userId));
 		return "member/member_view";
 	}
+	
+	@RequestMapping("member/update.do")
+	public String memberUpdate(@ModelAttribute MemberDto dto) {
+		memberService.updateMember(dto);
+		return "redirect:/member/list.do";
+	}
 }
