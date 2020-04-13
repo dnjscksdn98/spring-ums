@@ -6,6 +6,14 @@
 		<meta charset="EUC-KR">
 		<title>회원 정보 상세 페이지</title>
 		<%@ include file="./member_header.jsp" %>
+		<script>
+			$(document).ready(function() {
+				$("#btnUpdate").click(function() {
+					document.update_form.action = "${path}/member/update.do";
+					document.update_form.submit();
+				})
+			})
+		</script>
 	</head>
 	<body>
 		<%@ include file="./member_menu.jsp" %>
@@ -23,6 +31,10 @@
 				<tr>
 					<td>이름</td>
 					<td><input name="userName" value="${dto.getUserName()}" /></td>
+				</tr>
+				<tr>
+					<td>이메일</td>
+					<td><input name="userEmail" value="${dto.getUserEmail()}" /></td>
 				</tr>
 				<tr>
 					<td>회원 가입일자</td>
