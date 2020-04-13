@@ -26,8 +26,8 @@ public class MemberDaoImpl implements MemberDao {
 	}
 	
 	@Override
-	public MemberDto viewMember() {
-		return null;
+	public MemberDto viewMember(String userId) {
+		return sqlSession.selectOne("member.viewMember", userId);
 	}
 	
 	@Override

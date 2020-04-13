@@ -10,7 +10,7 @@ public interface MemberDao {
 	
 	public void insertMember(MemberDto dto);  // 회원 추가
 	
-	public MemberDto viewMember();  // 회원 정보 상세 보기
+	public MemberDto viewMember(String userId);  // 회원 정보 상세 보기
 	
 	public void deleteMember(String userId);  // 회원 삭제
 	
