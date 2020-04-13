@@ -9,8 +9,19 @@
 		<script>
 			$(document).ready(function() {
 				$("#btnUpdate").click(function() {
-					document.update_form.action = "${path}/member/update.do";
-					document.update_form.submit();
+					if(confirm("수정하시겠습니까?")) {
+						document.detail_form.action = "${path}/member/update.do";
+						document.detail_form.submit();
+					}
+				})
+			})
+			
+			$(document).ready(function() {
+				$("#btnDelete").click(function() {
+					if(confirm("삭제하시겠습니까?")) {
+						document.detail_form.action = "${path}/member/delete.do";
+						document.detail_form.submit();
+					}
 				})
 			})
 		</script>
@@ -18,7 +29,7 @@
 	<body>
 		<%@ include file="./member_menu.jsp" %>
 		<h2>회원 상세 정보</h2>
-		<form name="update_form" method="post">
+		<form name="detail_form" method="post">
 			<table border="1" width="400px">
 				<tr>
 					<td>아이디</td>
@@ -52,6 +63,7 @@
 					<td colspan="2" align="center">
 						<input type="button" value="수정" id="btnUpdate" />
 						<input type="button" value="삭제" id="btnDelete" />
+						<div style="color: red;">${msg}</div>
 					</td>
 				</tr>
 			</table>
